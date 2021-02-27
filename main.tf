@@ -35,3 +35,4 @@ resource "random_string" "random" {
 output "ip" {
   value =[for i in docker_container.nodered_container[*]: join(":",[i.name])]
 }
+###
